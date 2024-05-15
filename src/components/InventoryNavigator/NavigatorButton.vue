@@ -10,8 +10,8 @@
 import { computed, type HTMLAttributes, toRefs } from 'vue'
 
 const props = withDefaults(defineProps<{
-  isActive: boolean
-  isHighlight: boolean
+  isActive?: boolean
+  isHighlight?: boolean
 }>(), {
     isActive: false,
     isHighlight: false,
