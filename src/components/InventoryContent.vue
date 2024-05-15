@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type InventoryView, InventoryViewValues } from '@/consts/inventory-view.ts'
-import BackpackContent from '@/components/BackpackContent.vue'
+import BackpackContent from '@/components/BackpackContent/BackpackContent.vue'
 import NexusContent from '@/components/NexusContent.vue'
 
 defineProps<{activeTab: InventoryView}>()

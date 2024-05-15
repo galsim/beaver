@@ -1,0 +1,62 @@
+<script setup lang="ts">
+import DeleteButton from '@/components/BackpackContent/DeleteButton.vue'
+import { computed, toRefs } from 'vue'
+import BackpackFilter from '@/components/BackpackContent/BackpackFilter.vue'
+import { BackpackFilterValues } from '@/consts/backpack-filters.js'
+
+const props = defineProps<{modelValue: BackpackFilter | undefined}>()
+const { modelValue } = toRefs(props)
+const emit = defineEmits<{(e: 'update:modelValue', value: BackpackFilter | undefined): void }>()
+const model = computed({
+    get: () => modelValue.value,
+    set: (newValue) => {
+        emit('update:modelValue', newValue)
+    },
+})
+</script>
+
+<template>
+    <div class="backpack-controls">
+        <BackpackFilter
+            class="backpack-controls__item"
+            v-model="model"
+            :current-filter="undefined"
+        />
+        <BackpackFilter
+            class="backpack-controls__item"
+            v-model="model"
+            :current-filter="BackpackFilterValues.ARMOR"
+        />
+        <BackpackFilter
+            class="backpack-controls__item"
+            v-model="model"
+            :current-filter="BackpackFilterValues.WEAPON"
+        />
+        <BackpackFilter
+            class="backpack-controls__item"
+            v-model="model"
+            :current-filter="BackpackFilterValues.MISCELLANEOUS"
+        />
+
+        <DeleteButton class="backpack-controls__last-item" />
+    </div>
+</template>
+
+<style scoped lang="scss">
+.backpack-controls {
+  padding: 15px 7px;
+  background: #393839;
+  border-right: 1px solid black;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__last-item {
+    margin-top: auto;
+  }
+}
+</style>
