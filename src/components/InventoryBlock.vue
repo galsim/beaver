@@ -2,6 +2,7 @@
 import InventoryNavigator from '@/components/InventoryNavigator/InventoryNavigator.vue'
 import { ref } from 'vue'
 import { type InventoryView, InventoryViewValues } from '@/consts/inventory-view.ts'
+import InventoryContent from '@/components/InventoryContent.vue'
 
 const activeTab = ref<InventoryView>(InventoryViewValues.BACKPACK)
 </script>
@@ -9,6 +10,7 @@ const activeTab = ref<InventoryView>(InventoryViewValues.BACKPACK)
 <template>
     <div class="inventory">
         <InventoryNavigator v-model="activeTab"></InventoryNavigator>
+        <InventoryContent :active-tab="activeTab"></InventoryContent>
     </div>
 </template>
 
