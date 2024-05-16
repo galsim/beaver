@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import BackpackControls from '@/components/BackpackContent/BackpackControls.vue'
-import type { BackpackFilter } from '@/consts/backpack-filters.ts'
 import BackpackControlLabel from '@/components/BackpackContent/BackpackControlLabel.vue'
 import BackpackItemsLoader from '@/components/BackpackContent/BackpackItemsLoader.vue'
 import BackpackItems from '@/components/BackpackContent/BackpackItems.vue'
 import { MIN_BACKPACK_ITEMS_LENGTH } from '@/consts/min-backpack-items.ts'
+import { useInventoryState } from '@/queries/inventory-state.ts'
+import type { InventoryType } from '@/consts/inventory-type.js'
 
-const activeFilter = ref<BackpackFilter>(undefined)
-const isLoading = ref(true)
+const activeFilter = ref<InventoryType>(undefined)
+const { isLoading } = useInventoryState()
 const count = ref(0)
 const items = ref([])
 const filledItems = computed(() => {

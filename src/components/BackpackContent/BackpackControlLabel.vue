@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { BackpackFilter } from '@/consts/backpack-filters.ts'
 import BackpackControlsLabelText from '@/components/BackpackContent/BackpackControlsLabelText.vue'
 import BackpackItemsLabelCount from '@/components/BackpackContent/BackpackItemsLabelCount.vue'
+import type { InventoryType } from '@/consts/inventory-type.js'
 
 defineProps<{
-  activeFilter: BackpackFilter | undefined,
+  activeFilter: InventoryType | undefined,
   isLoading: boolean,
   count: number
 }>()

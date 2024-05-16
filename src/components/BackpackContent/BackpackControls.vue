@@ -2,7 +2,7 @@
 import DeleteButton from '@/components/BackpackContent/DeleteButton.vue'
 import { computed, toRefs } from 'vue'
 import BackpackFilter from '@/components/BackpackContent/BackpackFilter.vue'
-import { BackpackFilterValues } from '@/consts/backpack-filters.js'
+import { InventoryTypeValues } from '@/consts/inventory-type.js'
 
 const props = defineProps<{modelValue: BackpackFilter | undefined}>()
 const { modelValue } = toRefs(props)
@@ -25,17 +25,17 @@ const model = computed({
         <BackpackFilter
             class="backpack-controls__item"
             v-model="model"
-            :current-filter="BackpackFilterValues.ARMOR"
+            :current-filter="InventoryTypeValues.ARMOR"
         />
         <BackpackFilter
             class="backpack-controls__item"
             v-model="model"
-            :current-filter="BackpackFilterValues.WEAPON"
+            :current-filter="InventoryTypeValues.WEAPON"
         />
         <BackpackFilter
             class="backpack-controls__item"
             v-model="model"
-            :current-filter="BackpackFilterValues.MISCELLANEOUS"
+            :current-filter="InventoryTypeValues.MISCELLANEOUS"
         />
 
         <DeleteButton class="backpack-controls__last-item" />

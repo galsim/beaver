@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { type BackpackFilter, BackpackFilterValues } from '@/consts/backpack-filters.ts'
+import { type InventoryType, InventoryTypeValues } from '@/consts/inventory-type.js'
 
-defineProps<{activeFilter: BackpackFilter | undefined}>()
+defineProps<{activeFilter: InventoryType | undefined}>()
 </script>
 
 <template>
-    <div class="backpack-main__label-text" v-if="activeFilter === BackpackFilterValues.ARMOR">ARMOR</div>
-    <div class="backpack-main__label-text" v-else-if="activeFilter === BackpackFilterValues.MISCELLANEOUS">MISCELLANEOUS</div>
-    <div class="backpack-main__label-text" v-else-if="activeFilter === BackpackFilterValues.WEAPON">WEAPONS</div>
+    <div class="backpack-main__label-text" v-if="activeFilter === InventoryTypeValues.ARMOR">ARMOR</div>
+    <div class="backpack-main__label-text" v-else-if="activeFilter === InventoryTypeValues.MISCELLANEOUS">MISCELLANEOUS</div>
+    <div class="backpack-main__label-text" v-else-if="activeFilter === InventoryTypeValues.WEAPON">WEAPONS</div>
     <div class="backpack-main__label-text" v-else>ALL ITEMS</div>
 </template>
 

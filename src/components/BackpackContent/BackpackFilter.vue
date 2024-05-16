@@ -5,15 +5,15 @@ import WeaponIcon from '@/svg/weapon.svg'
 import MiscellaneousIcon from '@/svg/miscellaneous.svg'
 import ControlButton from '@/components/BackpackContent/ControlButton.vue'
 import { toRefs } from 'vue'
-import { type BackpackFilter, BackpackFilterValues } from '@/consts/backpack-filters.js'
+import { type InventoryType, InventoryTypeValues } from '@/consts/inventory-type.js'
 
 const props = defineProps<{
-  modelValue: BackpackFilter | undefined,
-  currentFilter: BackpackFilter | undefined
+  modelValue: InventoryType | undefined,
+  currentFilter: InventoryType | undefined
 }>()
 const { modelValue } = toRefs(props)
-const emit = defineEmits<{(e: 'update:modelValue', value: BackpackFilter | undefined): void }>()
-const applyFilter = (newFilter: BackpackFilter | undefined) => {
+const emit = defineEmits<{(e: 'update:modelValue', value: InventoryType | undefined): void }>()
+const applyFilter = (newFilter: InventoryType | undefined) => {
     emit('update:modelValue', newFilter)
 }
 </script>
@@ -24,8 +24,8 @@ const applyFilter = (newFilter: BackpackFilter | undefined) => {
         @click="applyFilter(currentFilter)"
     >
         <TileIcon v-if="currentFilter === undefined" />
-        <ArmorIcon v-else-if="currentFilter === BackpackFilterValues.ARMOR" />
-        <WeaponIcon v-else-if="currentFilter === BackpackFilterValues.WEAPON" />
-        <MiscellaneousIcon v-else-if="currentFilter === BackpackFilterValues.MISCELLANEOUS" />
+        <ArmorIcon v-else-if="currentFilter === InventoryTypeValues.ARMOR" />
+        <WeaponIcon v-else-if="currentFilter === InventoryTypeValues.WEAPON" />
+        <MiscellaneousIcon v-else-if="currentFilter === InventoryTypeValues.MISCELLANEOUS" />
     </ControlButton>
 </template>
