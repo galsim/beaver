@@ -8,14 +8,14 @@ import { MIN_BACKPACK_ITEMS_LENGTH } from '@/consts/min-backpack-items.ts'
 import { useInventoryState } from '@/queries/inventory-state.ts'
 import type { InventoryType } from '@/consts/inventory-type.js'
 
-const activeFilter = ref<InventoryType>(undefined)
-const { isLoading } = useInventoryState()
+const activeFilter = ref<InventoryType | undefined>(undefined)
+const { isLoading, data: inventory } = useInventoryState()
+const items = computed(() => inventory.value?.inventory ?? [])
 const count = ref(0)
-const items = ref([])
 const filledItems = computed(() => {
     const itemsLength = items.value.length
     if (itemsLength < 40) {
-        return items.value.concat(Array.from({ length: MIN_BACKPACK_ITEMS_LENGTH - itemsLength }))
+        return (items.value).concat(Array.from({ length: MIN_BACKPACK_ITEMS_LENGTH - itemsLength }))
     }
 
     return items.value

@@ -5,9 +5,12 @@ export interface InventoryItem {
     type: InventoryType,
     name: string,
     imageUrl: string,
-    count: number,
-    charges: number,
-    maxCharges: number
+    cooldown?: number,
+    count?: number,
+    charges?: number,
+    maxCharges?: number
 }
 
-export type InventoryState = InventoryItem[]
+export interface InventoryState {
+    inventory: InventoryItem[],
+}

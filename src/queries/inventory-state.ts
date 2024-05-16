@@ -1,5 +1,5 @@
-import { useQuery } from '@tanstack/vue-query'
-import type { InventoryState } from '@/types/invetory-state.ts'
+import { useQuery, UseQueryReturnType } from '@tanstack/vue-query'
+import { InventoryState } from '@/types/inventory-state'
 
 const MAX_LIMIT = 3
 const MIN_LIMIT = 1
@@ -31,11 +31,11 @@ function getCase() {
 
 async function fetchInventoryState(): Promise<InventoryState> {
     const caseNumber = getCase()
-    const response = await fetch(`https://us-central1-seven-seven-bit-inhouse-helper.cloudfunctions.net/vueDevTestTask-getInventoryState?case=${caseNumber}`)
-    return await response.json()
+    return fetch(`https://us-central1-seven-seven-bit-inhouse-helper.cloudfunctions.net/vueDevTestTask-getInventoryState?case=${caseNumber}`)
+        .then((response) => response.json())
 }
 
-export function useInventoryState() {
+export function useInventoryState(): UseQueryReturnType<InventoryState, Error> {
     return useQuery<InventoryState>({
         queryKey: ['InventoryState'],
         queryFn: fetchInventoryState,
