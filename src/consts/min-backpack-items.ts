@@ -1,0 +1,1 @@
+export const MIN_BACKPACK_ITEMS_LENGTH = 40

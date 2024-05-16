@@ -10,7 +10,6 @@ import InventoryBlock from '@/components/InventoryBlock.vue'
 
 <style scoped lang="scss">
   .container {
-    width: 500px;
     margin: 0 auto;
   }
 </style>

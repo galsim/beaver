@@ -47,7 +47,6 @@ const model = computed({
   padding: 15px 7px;
   background: #393839;
   border-right: 1px solid black;
-  height: 500px;
   display: flex;
   flex-direction: column;
 
