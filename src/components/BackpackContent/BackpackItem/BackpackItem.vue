@@ -28,7 +28,8 @@ const { isTooltipVisible, x, y } = useTooltip(backpackContainer)
             :name="item.name"
             :x="x"
             :y="y"/>
-        <ItemImage :src="item.imageUrl"/>
+        <ItemImage :src="item.imageUrl"
+                   :key="item.imageUrl"/>
         <ItemCharges
             v-if="item.charges !== undefined && item.maxCharges !== undefined"
             :charges="item.charges"

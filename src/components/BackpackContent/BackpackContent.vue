@@ -10,7 +10,17 @@ import type { InventoryType } from '@/consts/inventory-type.js'
 
 const activeFilter = ref<InventoryType | undefined>(undefined)
 const { isLoading, data: inventory } = useInventoryState()
-const items = computed(() => inventory.value?.inventory ?? [])
+const items = computed(() => {
+    if (inventory.value === undefined) {
+        return []
+    }
+
+    if (activeFilter.value !== undefined) {
+        return inventory.value.inventory.filter((item) => item.type === activeFilter.value)
+    }
+
+    return inventory.value.inventory
+})
 const filledItems = computed(() => {
     const itemsLength = items.value.length
     if (itemsLength < 40) {
