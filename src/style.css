@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-bolditalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-extrabolditalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-extralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-extralightitalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-heavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-heavyitalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-lightitalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-semibolditalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: url('assets/fonts/commuterssans-thinitalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Commuters Sans', sans-serif;
+}
