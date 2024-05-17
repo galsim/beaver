@@ -11,7 +11,6 @@ import type { InventoryType } from '@/consts/inventory-type.js'
 const activeFilter = ref<InventoryType | undefined>(undefined)
 const { isLoading, data: inventory } = useInventoryState()
 const items = computed(() => inventory.value?.inventory ?? [])
-const count = ref(0)
 const filledItems = computed(() => {
     const itemsLength = items.value.length
     if (itemsLength < 40) {
@@ -30,7 +29,7 @@ const filledItems = computed(() => {
             <BackpackControlLabel
                 :active-filter="activeFilter"
                 :is-loading="isLoading"
-                :count="count"
+                :count="items.length"
             />
 
             <div class="backpack-main__grid">
