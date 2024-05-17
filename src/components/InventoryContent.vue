@@ -8,8 +8,8 @@ defineProps<{activeTab: InventoryView}>()
 
 <template>
     <div class="inventory-content">
-        <BackpackContent v-if="activeTab === InventoryViewValues.BACKPACK"></BackpackContent>
-        <NexusContent v-if="activeTab === InventoryViewValues.NEXUS"></NexusContent>
+        <BackpackContent v-if="activeTab === InventoryViewValues.BACKPACK"/>
+        <NexusContent v-if="activeTab === InventoryViewValues.NEXUS"/>
     </div>
 </template>
 

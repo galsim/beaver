@@ -4,7 +4,8 @@ import BucketIcon from '@/svg/bucket.svg'
 </script>
 
 <template>
-    <ControlButton is-outlined is-active>
+    <ControlButton is-outlined
+                   is-active>
         <BucketIcon />
     </ControlButton>
 </template>

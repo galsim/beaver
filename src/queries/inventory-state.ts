@@ -1,5 +1,5 @@
 import { useQuery, UseQueryReturnType } from '@tanstack/vue-query'
-import { InventoryState } from '@/types/inventory-state'
+import { InventoryState } from '@/types/inventory-state.ts'
 
 const MAX_LIMIT = 3
 const MIN_LIMIT = 1
@@ -9,9 +9,9 @@ function parseCaseFromString(string: string | null): number | undefined {
         return undefined
     }
 
-    const caseNumber = Number.parseInt(string)
+    const caseNumber = Number.parseInt(string, 10)
 
-    if (isNaN(caseNumber)) {
+    if (Number.isNaN(caseNumber)) {
         return undefined
     }
 

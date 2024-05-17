@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import NavigatorButton from '@/components/InventoryNavigator/NavigatorButton.vue'
 import CrossIcon from '@/svg/cross.svg'
-import { type InventoryView, InventoryViewValues } from '@/consts/inventory-view.js'
+import { type InventoryView, InventoryViewValues } from '@/consts/inventory-view.ts'
 
 defineProps<{ modelValue: InventoryView }>()
 </script>

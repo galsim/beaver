@@ -11,7 +11,7 @@ const classes = computed<HTMLAttributes['style']>(() => ([
 
 <template>
     <div :class="classes">
-        <slot></slot>
+        <slot/>
     </div>
 </template>
 
@@ -24,14 +24,19 @@ const classes = computed<HTMLAttributes['style']>(() => ([
     position: relative;
     overflow: hidden;
 
-    &::before {
+     &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+              90deg,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.2) 50%,
+              rgba(255, 255, 255, 0) 100%
+      );
       animation: loading 1.5s infinite;
     }
   }

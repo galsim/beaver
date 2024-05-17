@@ -9,7 +9,7 @@ module.exports = {
         'airbnb-base',
         'plugin:vue/vue3-essential',
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended'
+        'plugin:@typescript-eslint/recommended',
     ],
     overrides: [
         {
@@ -57,5 +57,26 @@ module.exports = {
         'import/extensions': ['off'],
         'import/prefer-default-export': ['off'],
         'no-param-reassign': 'off',
+        'vue/html-self-closing': ['error', {
+            html: {
+                void: 'always',
+                normal: 'always',
+                component: 'always',
+            },
+            svg: 'always',
+            math: 'always',
+        }],
+        'vue/singleline-html-element-content-newline': ['error', {
+            ignoreWhenNoAttributes: false,
+            ignoreWhenEmpty: true,
+        }],
+        'vue/max-attributes-per-line': ['error', {
+            singleline: {
+                max: 1,
+            },
+            multiline: {
+                max: 1,
+            },
+        }],
     },
 }

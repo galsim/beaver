@@ -3,7 +3,8 @@ defineProps<{src: string}>()
 </script>
 
 <template>
-    <img class="backpack-item-image" :src="src">
+    <img class="backpack-item-image"
+         :src="src"/>
 </template>
 
 <style scoped lang="scss">

@@ -6,7 +6,9 @@ const emptyItems = Array.from({ length: MIN_BACKPACK_ITEMS_LENGTH })
 </script>
 
 <template>
-    <BackpackItemWrapper v-for="(_, index) in emptyItems" :key="index" is-loading></BackpackItemWrapper>
+    <BackpackItemWrapper v-for="(_, index) in emptyItems"
+                         :key="index"
+                         is-loading/>
 </template>
 
 <style scoped lang="scss">

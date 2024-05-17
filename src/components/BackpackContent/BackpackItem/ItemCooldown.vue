@@ -9,17 +9,18 @@ const timeDifference = useTimeDifference(cooldown)
 </script>
 
 <template>
-    <div class="backpack-item-cooldown" v-if="timeDifference >0">
+    <div class="backpack-item-cooldown"
+         v-if="timeDifference >0">
         <div class="backpack-item-cooldown__content">
             <div class="backpack-item-cooldown__icon">
-                <TimerIcon></TimerIcon>
+                <TimerIcon/>
             </div>
             <div class="backpack-item-cooldown__time">
                 {{ timeDifference }}s
             </div>
         </div>
 
-        <div class="backpack-item-cooldown__background"></div>
+        <div class="backpack-item-cooldown__background"/>
     </div>
 </template>
 

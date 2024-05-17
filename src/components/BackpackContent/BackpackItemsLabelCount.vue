@@ -3,7 +3,9 @@ defineProps<{ count: number }>()
 </script>
 
 <template>
-    <div class="backpack-main__label-count">{{ count }} / 100</div>
+    <div class="backpack-main__label-count">
+        {{ count }} / 100
+    </div>
 </template>
 
 <style scoped lang="scss">

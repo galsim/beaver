@@ -1,7 +1,8 @@
 <template>
-    <div :class="classes" @click="onClick">
+    <div :class="classes"
+         @click="onClick">
         <div class="control-button__icon">
-            <slot></slot>
+            <slot/>
         </div>
     </div>
 </template>

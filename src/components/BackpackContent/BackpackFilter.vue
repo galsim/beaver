@@ -5,7 +5,7 @@ import WeaponIcon from '@/svg/weapon.svg'
 import MiscellaneousIcon from '@/svg/miscellaneous.svg'
 import ControlButton from '@/components/BackpackContent/ControlButton.vue'
 import { toRefs } from 'vue'
-import { type InventoryType, InventoryTypeValues } from '@/consts/inventory-type.js'
+import { type InventoryType, InventoryTypeValues } from '@/consts/inventory-type.ts'
 
 const props = defineProps<{
   modelValue: InventoryType | undefined,

@@ -9,8 +9,8 @@ const activeTab = ref<InventoryView>(InventoryViewValues.BACKPACK)
 
 <template>
     <div class="inventory">
-        <InventoryNavigator v-model="activeTab"></InventoryNavigator>
-        <InventoryContent :active-tab="activeTab"></InventoryContent>
+        <InventoryNavigator v-model="activeTab"/>
+        <InventoryContent :active-tab="activeTab"/>
     </div>
 </template>
 

@@ -13,12 +13,12 @@ defineProps<{
 
 <template>
     <div class="backpack-main__label">
-        <BackpackControlsLabelText :active-filter="activeFilter"></BackpackControlsLabelText>
+        <BackpackControlsLabelText :active-filter="activeFilter"/>
 
         <BackpackItemsLabelCount
             v-if="!isLoading"
             :count="count"
-        ></BackpackItemsLabelCount>
+        />
     </div>
 </template>
 

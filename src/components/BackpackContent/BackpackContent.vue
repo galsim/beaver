@@ -23,7 +23,7 @@ const filledItems = computed(() => {
 
 <template>
     <div class="backpack-content">
-        <BackpackControls v-model="activeFilter"></BackpackControls>
+        <BackpackControls v-model="activeFilter"/>
 
         <div class="backpack-main">
             <BackpackControlLabel
@@ -33,8 +33,9 @@ const filledItems = computed(() => {
             />
 
             <div class="backpack-main__grid">
-                <BackpackItemsLoader v-if="isLoading"></BackpackItemsLoader>
-                <BackpackItems v-else :items="filledItems"></BackpackItems>
+                <BackpackItemsLoader v-if="isLoading"/>
+                <BackpackItems v-else
+                               :items="filledItems"/>
             </div>
         </div>
     </div>

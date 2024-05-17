@@ -10,7 +10,8 @@ const tooltipStyle = computed(() => ({
 </script>
 
 <template>
-    <div class="item-tooltip" :style="tooltipStyle">
+    <div class="item-tooltip"
+         :style="tooltipStyle">
         {{ name }}
     </div>
 </template>

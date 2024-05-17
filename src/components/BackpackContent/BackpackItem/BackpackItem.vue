@@ -21,19 +21,25 @@ const { isTooltipVisible, x, y } = useTooltip(backpackContainer)
 </script>
 
 <template>
-    <div :class="classes" ref="backpackContainer">
-        <ItemTooltip v-if="isTooltipVisible" :name="item.name" :x="x" :y="y"></ItemTooltip>
-        <ItemImage :src="item.imageUrl"></ItemImage>
+    <div :class="classes"
+         ref="backpackContainer">
+        <ItemTooltip
+            v-if="isTooltipVisible"
+            :name="item.name"
+            :x="x"
+            :y="y"/>
+        <ItemImage :src="item.imageUrl"/>
         <ItemCharges
             v-if="item.charges !== undefined && item.maxCharges !== undefined"
             :charges="item.charges"
             :maxCharges="item.maxCharges"
-        ></ItemCharges>
+        />
         <ItemCount
             v-if="item.count !== undefined"
             :count="item.count"
-        ></ItemCount>
-        <ItemCooldown v-if="item.cooldown" :cooldown="item.cooldown"></ItemCooldown>
+        />
+        <ItemCooldown v-if="item.cooldown"
+                      :cooldown="item.cooldown"/>
     </div>
 </template>
 

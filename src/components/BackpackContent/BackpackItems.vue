@@ -10,8 +10,10 @@ defineProps<{
 </script>
 
 <template>
-    <BackpackItemWrapper v-for="(item, index) in items" :key="index">
-        <BackpackItem v-if="item !== undefined" :item="item"></BackpackItem>
+    <BackpackItemWrapper v-for="(item, index) in items"
+                         :key="index">
+        <BackpackItem v-if="item !== undefined"
+                      :item="item"/>
     </BackpackItemWrapper>
 </template>
 

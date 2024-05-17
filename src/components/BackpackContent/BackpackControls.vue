@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import DeleteButton from '@/components/BackpackContent/DeleteButton.vue'
 import { computed, toRefs } from 'vue'
+import { type InventoryType, InventoryTypeValues } from '@/consts/inventory-type.ts'
 import BackpackFilter from '@/components/BackpackContent/BackpackFilter.vue'
-import { InventoryTypeValues } from '@/consts/inventory-type.js'
 
-const props = defineProps<{modelValue: BackpackFilter | undefined}>()
+const props = defineProps<{modelValue: InventoryType | undefined}>()
 const { modelValue } = toRefs(props)
-const emit = defineEmits<{(e: 'update:modelValue', value: BackpackFilter | undefined): void }>()
+const emit = defineEmits<{(e: 'update:modelValue', value: InventoryType | undefined): void }>()
 const model = computed({
     get: () => modelValue.value,
     set: (newValue) => {
