@@ -11,25 +11,15 @@ defineProps<{charges: number, maxCharges: number}>()
 <style scoped lang="scss">
 .backpack-item-charges {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  padding: 5px;
+  top: 0;
+  left: 0;
   color: #ffffff;
   font-weight: 500;
   font-size: 17px;
   z-index: 2;
-
-  &::before {
-    position: absolute;
-    top: -20px;
-    left: -25px;
-    content: '';
-    display: block;
-    z-index: -1;
-    transform: rotate(-30deg);
-    width: 120px;
-    height: 40px;
-    background: rgba(6, 6, 6, 0.65);
-    opacity: .25;
-  }
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(to right bottom, rgba(6, 6, 6, 0.25) 50%, transparent 50%);
 }
 </style>

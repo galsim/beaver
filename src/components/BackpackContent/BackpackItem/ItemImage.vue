@@ -9,7 +9,8 @@ defineProps<{src: string}>()
 <style scoped lang="scss">
 .backpack-item-image {
   display: block;
-  margin: 5px auto;
+  margin: 0 auto;
+  padding-top: 5px;
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   object-fit: contain;
