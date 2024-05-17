@@ -65,7 +65,9 @@ const filledItems = computed(() => {
     margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 95px;
+    grid-auto-rows: 100px;
+    max-height: 800px;
+    overflow-y: auto;
   }
 }
 </style>
